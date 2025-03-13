@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+input, button {
+    margin: 10px;
+    padding: 8px;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    width: 50%;
+    margin: auto;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+li span {
+    flex: 1;
+    text-align: left;
+    padding-left: 10px; /* Ensure text starts with left indentation */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 10px #aaa;
+    border-radius: 8px;
+}
+
+.modal-content {
+    text-align: center;
+}
+
+.close {
+    cursor: pointer;
+    float: right;
+    font-size: 24px;
+}
+
+/* Ensure Buttons are aligned properly */
+.button-group {
+    display: flex;
+    gap: 10px;
+}
+
+/* Ensure checkbox and title start from the same position */
+.task-content {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+/* Ensure checkbox doesn't affect alignment */
+.task-content input[type="checkbox"] {
+    margin-right: 10px;
+}

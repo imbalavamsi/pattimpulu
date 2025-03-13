@@ -1,0 +1,16 @@
+INSERT INTO CHECKLIST_ITEM (title, description, completed, version) VALUES
+('Master Data Structures & Algorithms', 'Learn sorting, searching, trees, graphs, and dynamic programming', false, 0),
+('Solve 300+ Leetcode Problems', 'Focus on FAANG-style interview questions from Leetcode, Codeforces, and CodeChef', false, 0),
+('System Design & Scalability', 'Understand load balancing, caching, database sharding, and microservices architecture', false, 0),
+('Object-Oriented Programming', 'Learn Java, Python, or C++ with a focus on OOP principles like encapsulation, inheritance, and polymorphism', false, 0),
+('Competitive Coding', 'Participate in contests on Codeforces, Leetcode, and Google Kickstart', false, 0),
+('SQL & NoSQL Databases', 'Master MySQL, PostgreSQL, MongoDB, and Redis', false, 0),
+('Cloud & DevOps', 'Get hands-on with AWS, Docker, Kubernetes, CI/CD pipelines', false, 0),
+('Concurrency & Multithreading', 'Understand Java Concurrency, Golang Routines, or Python threading', false, 0),
+('Mock Interviews & Behavioral Rounds', 'Practice STAR method for behavioral rounds at FAANG companies', false, 0),
+('Read "Cracking the Coding Interview"', 'Study the famous FAANG preparation book by Gayle Laakmann McDowell', false, 0),
+('Contribute to Open Source', 'Engage with projects on GitHub and contribute to large-scale repositories', false, 0),
+('Build Scalable Projects', 'Develop real-world applications with high availability and distributed systems', false, 0),
+('Master Frontend & Backend Technologies', 'Learn React.js, Angular, Node.js, Spring Boot, Django, Flask', false, 0),
+('Ace Operating System & Networking', 'Understand OS fundamentals, Linux, TCP/IP, HTTP, and DNS', false, 0),
+('Create a Standout Resume & LinkedIn Profile', 'Tailor resume with impact-driven achievements and optimize LinkedIn for recruiters', false, 0);

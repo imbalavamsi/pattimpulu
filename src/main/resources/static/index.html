@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pattimpulu Checklist</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+</head>
+<body>
+<h1>Pattimpulu Checklist</h1>
+
+<input
+        type="text"
+        id="searchBox"
+        placeholder="Search tasks..."
+        oninput="searchTasks()"
+/>
+<div id="searchResults"></div>
+
+<!-- Add Task Form -->
+<input type="text" id="taskInput" placeholder="Enter a task..." onkeyup="validateInput()">
+<button id="addTaskButton" onclick="addChecklistItem()" disabled>Add Task</button>
+
+<!-- Checklist Display -->
+<h2>Task List</h2>
+<ul id="checklist"></ul>
+
+<!-- Task View/Update Modal -->
+<div id="taskModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Edit Task</h2>
+        <input type="text" id="editTitle" placeholder="Task Title">
+        <input type="text" id="editDescription" placeholder="Description">
+        <label><input type="checkbox" id="editCompleted"> Completed</label>
+        <button onclick="updateChecklistItem()">Save Changes</button>
+    </div>
+</div>
+
+<script src="api.js"></script>
+<script src="checklist.js"></script>
+</body>
+</html>

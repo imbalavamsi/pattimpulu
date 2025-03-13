@@ -1,0 +1,18 @@
+2025-03-12 22:38:03.235713-04:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "CHECKLIST_ITEM" not found (this database is empty); SQL statement:
+SELECT * FROM CHECKLIST_ITEM [42104-232]
+2025-03-12 22:38:56.517666-04:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "CHECKLIST_ITEM" not found (this database is empty); SQL statement:
+select ci1_0.id,ci1_0.completed,ci1_0.description,ci1_0.title from checklist_item ci1_0 where ci1_0.id=? [42104-232]
+2025-03-12 22:40:31.090570-04:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "CHECKLIST_ITEM" not found (this database is empty); SQL statement:
+SELECT * FROM CHECKLIST_ITEM [42104-232]
+2025-03-12 22:40:32.390730-04:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "CHECKLIST_ITEM" not found (this database is empty); SQL statement:
+SELECT * FROM CHECKLIST_ITEM [42104-232]
+2025-03-12 22:40:36.328977-04:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "CHECKLIST_ITEM" not found (this database is empty); SQL statement:
+SELECT * FROM CHECKLIST_ITEM [42104-232]
+2025-03-12 22:41:57.966733-04:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "CHECKLIST_ITEM" not found (this database is empty); SQL statement:
+select ci1_0.id,ci1_0.completed,ci1_0.description,ci1_0.title from checklist_item ci1_0 where ci1_0.id=? [42104-232]
