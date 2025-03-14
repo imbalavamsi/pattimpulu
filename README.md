@@ -1,178 +1,130 @@
-# ✅ Pattimpulu Checklist Application
+# Pattimpulu Checklist Application 📝✅
 
-A **full-stack** task management system that allows users to **add, update, mark as completed, delete, and search tasks**.  
-The project follows best practices in **Spring Boot, REST APIs, H2 Database, HTML, CSS, JavaScript, and Fetch API**.
-
----
-
-## 🚀 Features
-
-### 📌 Core Features
-- **CRUD Operations**: Add, View, Edit, Delete tasks.
-- **Task Completion**: Mark tasks as completed (tasks are strikethrough when done).
-- **Task List Update**: Refreshes automatically after every action.
-- **Search Functionality**: Find tasks using keywords (both UI and API).
-- **Optimistic Locking**: Prevents unintended overwrites when updating tasks.
-- **Bulk Task Creation**: Supports multiple task insertions at once.
-- **User-Friendly UI**: Simple and responsive checklist view.
-
-### 🛠 Backend Features
-- **Spring Boot**: RESTful APIs for task management.
-- **Spring Data JPA**: Simplifies database operations.
-- **H2 In-Memory Database**: Enables fast testing & persistence.
-- **Global Exception Handling**: Handles errors for missing/invalid data.
-- **Swagger OpenAPI**: API documentation enabled at `/swagger-ui.html`.
-- **Unit Testing**: JUnit 5 and Mockito tests included.
-
-### 🎨 Frontend Features
-- **Vanilla JavaScript UI**: No frameworks, just **HTML, CSS, and JavaScript**.
-- **Modal Popups**: Allows in-place editing of tasks.
-- **Dynamic Task List**: Fetches latest tasks after every operation.
-- **Real-time Search**: Instant search results while typing.
-- **Form Validation**: Prevents invalid task creation.
+A full-stack **Checklist Management Application** built using **Spring Boot 3 (Java 17)** for the backend and **HTML5, CSS3, JavaScript (ES6+), and Fetch API** for the frontend. It supports **CRUD operations, search, UI validation, and versioned updates**. The project is designed to work with an **H2 in-memory database** but also supports persistence mode.
 
 ---
 
-## 🏷️ Technologies Used
-
-| Layer        | Technologies |
-|-------------|-------------|
-| **Frontend** | HTML5, CSS3, JavaScript, Fetch API |
-| **Backend**  | Java 17, Spring Boot, Spring Data JPA |
-| **Database** | H2 In-Memory Database |
-| **Testing**  | JUnit 5, Mockito |
-| **API Docs** | Swagger OpenAPI |
-| **Build Tools** | Maven |
-
----
-
-## 🏠 Project Structure
-
-```
-📂 pattimpulu-checklist
-│── 📂 src/main/java/dev/backend/pattimpulu
-│   │── 📂 controller        # REST Controllers
-│   │── 📂 service           # Business Logic
-│   │── 📂 repository        # Spring Data Repositories
-│   │── 📂 model             # JPA Entity Models
-│   │── 📂 exception         # Custom Exception Handlers
-│   │── 📂 config            # Configuration Files
-│── 📂 src/main/resources
-│   │── application.properties   # Database and App Configs
-│   │── data.sql                 # Preloaded tasks
-│   │── schema.sql               # Database Schema
-│── 📂 src/test/java/dev/backend/pattimpulu
-│   │── 📂 service           # JUnit and Mockito Tests
-│── 📂 frontend
-│   │── index.html           # Main UI
-│   │── styles.css           # UI Styling
-│   │── checklist.js         # Task Management Logic
-│   │── api.js               # API Calls
-│── pom.xml                 # Maven Dependencies
-```
+## 🔹 Features
+- **Create, Read, Update, and Delete (CRUD) Tasks** 🤞👁️✏️❌
+- **Mark Tasks as Completed** ✅ (strikethrough effect on UI)
+- **Search Feature** 🔍 (Search tasks by title)
+- **Bulk Task Addition API** 🛂 (Add multiple tasks in one API call)
+- **Validation Rules**
+  - No empty/blank tasks can be added ❌
+  - Buttons are **disabled** until valid input is provided 🎯
+  - Only **completed** and **version** fields can change during completion updates 🛠️
+- **Task Versioning** (To handle concurrency and avoid unintended overwrites) 🔄
+- **Front-end & Back-end Connected** 🔗
+- **H2 Database Support** (In-memory & persistent) 📚
+- **Swagger API Documentation** 📝
+- **Unit Testing** with JUnit (30+ Test Cases) 🧪
+- **Uses Modern Development Tools** (ESLint, Spring DevTools, Postman, Networking Tools)
 
 ---
 
-## 📖 API Documentation
+## 🚀 Technologies Used
+### Backend
+- **Java 17**
+- **Spring Boot 3.4.3**
+- **Spring Data JPA (Hibernate)**
+- **Spring Web (REST APIs)**
+- **Spring DevTools**
+- **Springdoc OpenAPI for Swagger**
+- **Lombok (Reduces Boilerplate Code)**
+- **H2 Database (Supports both in-memory & persistent mode)**
 
-### ✅ Base URL:  
-```
-http://localhost:8080/api/checklist
-```
+### Frontend
+- **HTML5 + CSS3**
+- **JavaScript (ES6+)**
+- **Fetch API for API calls**
+- **Networking Tools (Browser DevTools, Postman)**
+- **ESLint for Code Quality**
 
-### 📌 **1. Get All Tasks**
-```http
-GET /api/checklist
-```
-**Response**
-```json
-[
-  {
-    "id": 1,
-    "title": "Master Data Structures",
-    "description": "Sorting, Searching, Trees",
-    "completed": false,
-    "version": 0
-  }
-]
-```
+### Testing & Development Tools
+- **JUnit 5.11.4**
+- **Mockito**
+- **Postman (For API Testing)**
+- **ESLint (For frontend JS linting)**
+- **Spring DevTools (Hot Reload for development)**
+- **H2 Console (for debugging the in-memory DB)**
 
-### 📌 **2. Get Task by ID**
-```http
-GET /api/checklist/{id}
-```
-**Response**
-```json
-{
-  "id": 1,
-  "title": "Master Data Structures",
-  "description": "Sorting, Searching, Trees",
-  "completed": false,
-  "version": 0
-}
-```
+---
 
-### 📌 **3. Create a New Task**
-```http
-POST /api/checklist
-Content-Type: application/json
+## 📂 Project Structure
 ```
-**Request Body**
-```json
-{
-  "title": "Solve 300+ Leetcode Problems",
-  "description": "Practice daily",
-  "completed": false
-}
-```
-
-### 📌 **4. Update a Task**
-```http
-PUT /api/checklist/{id}
-```
-
-### 📌 **5. Delete a Task**
-```http
-DELETE /api/checklist/{id}
+pattimpulu/
+│— src/
+│   ├— main/
+│   │   ├— java/dev/backend/pattimpulu
+│   │   │   ├— controller/      # REST API Controllers
+│   │   │   ├— service/         # Business Logic
+│   │   │   ├— repository/      # JPA Repository
+│   │   │   ├— model/           # Entity Models
+│   │   │   ├— exception/       # Custom Exceptions
+│   │   ├— resources/
+│   │   │   ├— application.properties  # Spring Config
+│   │   │   ├— data.sql         # Preloaded Data for Persistence
+│   │   ├— static/
+│   │   │   ├— index.html       # Frontend UI
+│   │   │   ├— styles.css       # Styles
+│   │   │   ├— api.js           # API Calls
+│   │   │   ├— checklist.js     # UI Logic
+│   ├— test/
+│   │   ├— java/dev/backend/pattimpulu
+│   │   │   ├— service/ChecklistItemServiceTest.java # JUnit Tests
+│   ├— pom.xml                  # Maven Dependencies
+│— README.md
 ```
 
 ---
 
-## 💪 Running the Application
+## 🛠️ How to Run the Application
+### 1⃣ Backend Setup
+#### Run via IDE
+- Open in **IntelliJ IDEA** / **VS Code**
+- Run `PattimpuluApplication.java`
 
-### 🔹 **Step 1: Clone Repository**
-```sh
-git clone https://github.com/your-repo/pattimpulu-checklist.git
-cd pattimpulu-checklist
-```
-
-### 🔹 **Step 2: Build and Run Backend**
-```sh
+#### Run via Terminal
+```bash
 mvn clean install
 mvn spring-boot:run
 ```
 
-### 🔹 **Step 3: Open Frontend**
-1. Open `frontend/index.html` in a browser.
-2. Start using the checklist UI.
+### 2⃣ Frontend Setup
+- Open `index.html` in **any browser** (Google Chrome, Edge, etc.)
 
 ---
 
-## 🚪 Future Enhancements
-- **User Authentication** (Login system)
-- **Task Priorities** (High, Medium, Low)
-- **Due Date Reminders** (Alerts)
-- **Dark Mode UI** (Theme Toggle)
-- **Export Tasks to CSV/PDF**
+## 📆 API Endpoints
+| Method | Endpoint                  | Description                   |
+|--------|---------------------------|-------------------------------|
+| GET    | `/api/checklist`          | Fetch all tasks               |
+| GET    | `/api/checklist/{id}`      | Get task by ID                |
+| POST   | `/api/checklist`          | Create a new task             |
+| POST   | `/api/checklist/bulk`     | Create multiple tasks         |
+| PUT    | `/api/checklist/{id}`      | Update a task                 |
+| DELETE | `/api/checklist/{id}`      | Delete a task                 |
+| GET    | `/api/checklist/search?keyword=xxx` | Search tasks by title |
 
 ---
 
-## 💪 Contributors
-- **Bala Vamsi Maragani**  
-- Technologies: Java, Spring Boot, JavaScript, CSS
+## 🌟 Why These Technologies?
+- **Spring Boot 3** → Modern, scalable backend framework
+- **H2 Database** → Lightweight & can switch to persistent mode
+- **Fetch API (JS)** → Simpler than Axios, native JS solution
+- **ESLint** → Ensures frontend code quality
+- **Lombok** → Reduces boilerplate code in Java
+- **Spring DevTools** → Auto-restart for backend
+- **Postman** → Manual API testing tool
+- **Networking Tools** → Check API calls in the browser
 
 ---
 
-## 📓 License
-This project is **open-source** under the **MIT License**.
+## 🚀 Future Enhancements
+- Add **JWT Authentication**
+- Convert UI to **React or Angular**
+- Add **Pagination**
+- Improve **Error Handling**
+- Deploy to **AWS or Heroku**
 
+---
